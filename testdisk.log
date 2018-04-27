@@ -1,0 +1,248 @@
+
+
+Fri Apr 27 14:50:57 2018
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.13.0-39-generic (#44~16.04.1-Ubuntu SMP Thu Apr 5 16:43:10 UTC 2018) x86_64
+Compiler: GCC 5.3
+ext2fs lib: 1.42.13, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       250069680 sectors
+/dev/sda: user_max   250069680 sectors
+/dev/sda: native_max 250069680 sectors
+/dev/sdb: LBA, HPA, LBA48, DCO support
+/dev/sdb: size       1953525168 sectors
+/dev/sdb: user_max   1953525168 sectors
+/dev/sdb: native_max 1953525168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 128 GB / 119 GiB - CHS 15566 255 63, sector size=512 - Phison  SATA SSD, S/N:07BB07731DB000002615, FW:SBFM01.0
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63, sector size=512 - HGST HTS541010A9E680, S/N:JD1009DM3DTHYK, FW:JA0OA7J0
+Disk /dev/sdc - 2000 GB / 1862 GiB - CHS 243197 255 63, sector size=512 - WD My Passport 25E1, FW:1015
+
+Partition table type (auto): Intel
+Disk /dev/sdb - 1000 GB / 931 GiB - HGST HTS541010A9E680
+Partition table type: Intel
+
+Analyse Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+Geometry from i386 MBR: head=255 sector=63
+BAD_RS LBA=2048 63
+NTFS at 0/32/33
+BAD_RS LBA=423800832 1
+BAD_RS LBA=443332608 63
+BAD_RS LBA=976760832 63
+NTFS at 60800/140/13
+BAD_RS LBA=1543921664 63
+Current partition structure:
+ 1 E extended LBA             0  31 33 121601  57 56 1953521727
+No partition is bootable
+ 5 L HPFS - NTFS              0  32 33 26380  64 52  423796736
+
+Bad relative sector.
+   X extended             26380  97 21 27596  13  1   19529729
+ 6 L Linux Swap           26380  97 22 27596  13  1   19529728
+
+Bad relative sector.
+   X extended             27596  44 34 60800  10 10  533420095
+ 7 L Linux                27596  45 34 60800  10 10  533420032
+
+Bad relative sector.
+   X extended             60800 139 13 96104 140 36  567158847
+ 8 L HPFS - NTFS          60800 140 13 96104 140 36  567158784
+
+Bad relative sector.
+   X extended             96104 172  6 121601  57 56  409602111
+ 9 L Linux                96104 173  6 121601  57 56  409602048
+
+Bad relative sector.
+
+search_part()
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+BAD_RS LBA=2048 63
+NTFS at 0/32/33
+filesystem size           423796736
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     HPFS - NTFS              0  32 33 26380  64 52  423796736
+     NTFS, blocksize=4096, 216 GB / 202 GiB
+     Linux Swap           26380  97 22 27596  12 48   19529712
+     SWAP2 version 1, pagesize=4096, 9999 MB / 9535 MiB
+
+recover_EXT2: s_block_group_nr=0/2034, s_mnt_count=53/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 66677504
+recover_EXT2: part_size 533420032
+     Linux                27596  45 34 60800  10 10  533420032
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 273 GB / 254 GiB
+BAD_RS LBA=976760832 63
+NTFS at 60800/140/13
+filesystem size           567158784
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     HPFS - NTFS          60800 140 13 96104 140 36  567158784
+     NTFS, blocksize=4096, 290 GB / 270 GiB
+
+recover_EXT2: s_block_group_nr=0/1562, s_mnt_count=86/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 51200256
+recover_EXT2: part_size 409602048
+     Linux                96104 173  6 121601  57 56  409602048
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 209 GB / 195 GiB
+
+Results
+   * HPFS - NTFS              0  32 33 26380  64 52  423796736
+     NTFS, blocksize=4096, 216 GB / 202 GiB
+   P Linux Swap           26380  97 22 27596  13  1   19529728
+     SWAP2 version 1, pagesize=4096, 9999 MB / 9536 MiB
+   P Linux                27596  45 34 60800  10 10  533420032
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 273 GB / 254 GiB
+   L HPFS - NTFS          60800 140 13 96104 140 36  567158784
+     NTFS, blocksize=4096, 290 GB / 270 GiB
+   L Linux                96104 173  6 121601  57 56  409602048
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 209 GB / 195 GiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 423796736 linear /dev/sdb 2048" | dmsetup create test0
+echo "0 19529728 linear /dev/sdb 423800832" | dmsetup create test1
+echo "0 533420032 linear /dev/sdb 443332608" | dmsetup create test2
+echo "0 567158784 linear /dev/sdb 976760832" | dmsetup create test3
+echo "0 409602048 linear /dev/sdb 1543921664" | dmsetup create test4
+add_ext_part_i386: max
+add_ext_part_i386: max
+
+interface_write()
+ 1 * HPFS - NTFS              0  32 33 26380  64 52  423796736
+ 2 P Linux Swap           26380  97 22 27596  13  1   19529728
+ 3 P Linux                27596  45 34 60800  10 10  533420032
+ 4 E extended LBA         60800  10 11 121601  57 56  976771072
+ 5 L HPFS - NTFS          60800 140 13 96104 140 36  567158784
+ 6 L Linux                96104 173  6 121601  57 56  409602048
+simulate write!
+
+write_mbr_i386: starting...
+write_all_log_i386: starting...
+write_all_log_i386: CHS: 60800/10/11,lba=976752640
+write_all_log_i386: CHS: 96104/172/1,lba=1543921596
+
+Analyse Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+Geometry from i386 MBR: head=255 sector=63
+BAD_RS LBA=2048 63
+NTFS at 0/32/33
+BAD_RS LBA=423800832 1
+BAD_RS LBA=443332608 63
+BAD_RS LBA=976760832 63
+NTFS at 60800/140/13
+BAD_RS LBA=1543921664 63
+Current partition structure:
+ 1 E extended LBA             0  31 33 121601  57 56 1953521727
+No partition is bootable
+ 5 L HPFS - NTFS              0  32 33 26380  64 52  423796736
+
+Bad relative sector.
+   X extended             26380  97 21 27596  13  1   19529729
+ 6 L Linux Swap           26380  97 22 27596  13  1   19529728
+
+Bad relative sector.
+   X extended             27596  44 34 60800  10 10  533420095
+ 7 L Linux                27596  45 34 60800  10 10  533420032
+
+Bad relative sector.
+   X extended             60800 139 13 96104 140 36  567158847
+ 8 L HPFS - NTFS          60800 140 13 96104 140 36  567158784
+
+Bad relative sector.
+   X extended             96104 172  6 121601  57 56  409602111
+ 9 L Linux                96104 173  6 121601  57 56  409602048
+
+Bad relative sector.
+
+search_part()
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+BAD_RS LBA=2048 63
+NTFS at 0/32/33
+filesystem size           423796736
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     HPFS - NTFS              0  32 33 26380  64 52  423796736
+     NTFS, blocksize=4096, 216 GB / 202 GiB
+     Linux Swap           26380  97 22 27596  12 48   19529712
+     SWAP2 version 1, pagesize=4096, 9999 MB / 9535 MiB
+
+recover_EXT2: s_block_group_nr=0/2034, s_mnt_count=53/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 66677504
+recover_EXT2: part_size 533420032
+     Linux                27596  45 34 60800  10 10  533420032
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 273 GB / 254 GiB
+BAD_RS LBA=976760832 63
+NTFS at 60800/140/13
+filesystem size           567158784
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     HPFS - NTFS          60800 140 13 96104 140 36  567158784
+     NTFS, blocksize=4096, 290 GB / 270 GiB
+
+recover_EXT2: s_block_group_nr=0/1562, s_mnt_count=86/4294967295, s_blocks_per_group=32768, s_inodes_per_group=8192
+recover_EXT2: s_blocksize=4096
+recover_EXT2: s_blocks_count 51200256
+recover_EXT2: part_size 409602048
+     Linux                96104 173  6 121601  57 56  409602048
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 209 GB / 195 GiB
+
+Results
+   * HPFS - NTFS              0  32 33 26380  64 52  423796736
+     NTFS, blocksize=4096, 216 GB / 202 GiB
+   P Linux Swap           26380  97 22 27596  13  1   19529728
+     SWAP2 version 1, pagesize=4096, 9999 MB / 9536 MiB
+   P Linux                27596  45 34 60800  10 10  533420032
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 273 GB / 254 GiB
+   L HPFS - NTFS          60800 140 13 96104 140 36  567158784
+     NTFS, blocksize=4096, 290 GB / 270 GiB
+   L Linux                96104 173  6 121601  57 56  409602048
+     ext4 blocksize=4096 Large_file Sparse_SB Recover, 209 GB / 195 GiB
+
+Hint for advanced users. dmsetup may be used if you prefer to avoid to rewrite the partition table for the moment:
+echo "0 423796736 linear /dev/sdb 2048" | dmsetup create test0
+echo "0 19529728 linear /dev/sdb 423800832" | dmsetup create test1
+echo "0 533420032 linear /dev/sdb 443332608" | dmsetup create test2
+echo "0 567158784 linear /dev/sdb 976760832" | dmsetup create test3
+echo "0 409602048 linear /dev/sdb 1543921664" | dmsetup create test4
+add_ext_part_i386: max
+add_ext_part_i386: max
+
+interface_write()
+ 1 * HPFS - NTFS              0  32 33 26380  64 52  423796736
+ 2 P Linux Swap           26380  97 22 27596  13  1   19529728
+ 3 P Linux                27596  45 34 60800  10 10  533420032
+ 4 E extended LBA         60800  10 11 121601  57 56  976771072
+ 5 L HPFS - NTFS          60800 140 13 96104 140 36  567158784
+ 6 L Linux                96104 173  6 121601  57 56  409602048
+
+search_part()
+Disk /dev/sdb - 1000 GB / 931 GiB - CHS 121601 255 63
+BAD_RS LBA=2048 63
+NTFS at 0/32/33
+filesystem size           423796736
+sectors_per_cluster       8
+mft_lcn                   786432
+mftmirr_lcn               2
+clusters_per_mft_record   -10
+clusters_per_index_record 1
+     HPFS - NTFS              0  32 33 26380  64 52  423796736
+     NTFS, blocksize=4096, 216 GB / 202 GiB
+SIGINT detected! TestDisk has been killed.
